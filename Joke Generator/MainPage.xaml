@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joke_Generator.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Joke Generator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Frame CornerRadius="15" BackgroundColor="AliceBlue" BorderColor="Black">
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="View Generated Joke here" FontSize="Title" Padding="30,10,30,10" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Push button below to create new joke!" FontSize="16" Padding="30,0,30,0" x:Name="joke"/>
+                <Label FontSize="16" Padding="30,24,30,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Category: "/>
+                                <Span Text="Any" FontAttributes="Bold" x:Name="categoryText"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Frame>
+        <Button Text="New Joke" HorizontalOptions="Center" BackgroundColor="#2196f3" TextColor="#ffffff" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
